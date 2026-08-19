@@ -6,7 +6,7 @@ import { Check, Sparkles, ArrowRight } from 'lucide-react';
 export const revalidate = 0;
 
 export default async function PricingPage() {
-  let plans = [];
+  let plans: any[] = [];
   try {
     plans = await prisma.pricingPlan.findMany({
       orderBy: { sortOrder: 'asc' },

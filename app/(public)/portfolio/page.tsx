@@ -6,7 +6,7 @@ import { ArrowRight, ExternalLink, Tag } from 'lucide-react';
 export const revalidate = 0;
 
 export default async function PortfolioPage() {
-  let projects = [];
+  let projects: any[] = [];
   try {
     projects = await prisma.portfolioProject.findMany({
       orderBy: { createdAt: 'desc' },
