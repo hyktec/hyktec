@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-navy-950 text-slate-100 font-sans antialiased selection:bg-hyktec-pink selection:text-white;
+  }
+}
+
+/* Glassmorphism & Custom Accents */
+.glass-panel {
+  background: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-panel-light {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(15, 23, 42, 0.08);
+}
+
+.gradient-border {
+  position: relative;
+  border-radius: 0.75rem;
+  background: linear-gradient(135deg, rgba(255, 46, 99, 0.4), rgba(15, 23, 42, 0.2));
+  padding: 1px;
+}
+
+.gradient-text {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-white via-slate-200 to-hyktec-pink;
+}
+
+.gradient-pink-red {
+  @apply bg-gradient-to-r from-hyktec-pink to-hyktec-red;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0A1128;
+}
+::-webkit-scrollbar-thumb {
+  background: #1E293B;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #FF2E63;
+}
